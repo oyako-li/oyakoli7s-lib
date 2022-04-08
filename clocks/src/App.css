@@ -23,7 +23,7 @@
   height: 450px;
   /* margin: auto; */
   /* object-fit: contain; */
-  background: #45652c;
+  background: #001c2a;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -37,7 +37,7 @@
 .clock span {
   position: absolute;
   inset: 20px;
-  color: #fff;
+  color: rgb(151, 246, 83);
   text-align: center;
   transform: rotate(calc(30deg*var(--i)));
 }
