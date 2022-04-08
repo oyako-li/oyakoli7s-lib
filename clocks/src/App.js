@@ -15,12 +15,6 @@ const TimeHandrer = () => {
   const [hh, setHh] = useState(0);
   const [mm, setMm] = useState(0);
   const [ss, setSs] = useState(0);
-  
-  // useEffect(()=>{
-  //   hr.style.transform = `rotateZ(${hh+(mm/12)}deg)`;
-  //   mn.style.transform = `rotateZ(${mm}deg)`;
-  //   sc.style.transform = `rotateZ(${ss}deg)`;
-  // })
 
   setInterval(()=>{
     let day = new Date();
