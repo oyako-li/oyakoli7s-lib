@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Todo</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootflat/2.0.4/css/bootflat.min.css">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+  <header>
+    <nav class="my-navbar">
+      <a class="my-navbar-brand" href="/">Todo</a>
+    </nav>
+  </header>
+  <main>
+    {% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col col-md-offset-3 col-md-6">
+                <nav class="panel panel-default">
+                    <div class="panel-heading">フォルダーを追加する</div>
+                <div class="panel-body">
+                    <form method="POST">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <div class="text-right">
+                            <button type="submit" class="btn btn-primary">送信</button>
+                        </div>
+                    </form>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+      {% endblock %}
+    </main>
+</body>
+</html>
